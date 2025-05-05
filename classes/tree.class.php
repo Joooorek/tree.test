@@ -71,7 +71,7 @@
 
         public function DeleteElement(int $id): bool 
         {
-            $query = $this->query->prepare("DELETE FROM tree WHERE id = :id");
+            $query = $this->pdo->prepare("DELETE FROM tree WHERE id = :id");
 
             return $query->execute([":id" => $id]);
         }
